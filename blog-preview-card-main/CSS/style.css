@@ -1,0 +1,121 @@
+@font-face {
+  font-family: "Figtree";
+  src: url("../assets/fonts/Figtree-VariableFont_wght.ttf");
+  font-weight: 500 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Figtree";
+  src: url("../assets/fonts/Figtree-Italic-VariableFont_wght.ttf");
+  font-weight: 500 900;
+  font-style: italic;
+}
+:root {
+  --gray-500: hsl(0, 0%, 42%);
+  --gray-950: hsl(0, 0%, 7%);
+  --yellow-: #f4d04e;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--yellow-);
+}
+main {
+  width: 384px;
+  height: 522px;
+  padding: 24px;
+  background-color: white;
+  color: var(--gray-950);
+  box-shadow: 8px 8px 0 0 black;
+  caret-color: transparent;
+  border: var(--gray-950) 1px solid;
+  border-radius: 20px;
+  display: flex;
+  flex-flow: column;
+  gap: 24px 0;
+  font-family: "Figtree", sans-serif;
+  line-height: 150%;
+}
+main section > img {
+  border-radius: 10px;
+  height: 200px;
+}
+main section:nth-of-type(1) {
+  display: flex;
+  gap: 12px 0;
+  flex-flow: column;
+}
+main h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px 0;
+  background-color: var(--yellow-);
+  width: fit-content;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-weight: 900;
+}
+main p,
+main h3 {
+  font-size: 14px;
+}
+main p {
+  font-weight: 700;
+}
+main h1 {
+  font-size: 24px;
+  transition: 0.3s;
+}
+main h1,
+main figure figcaption {
+  font-weight: 900;
+}
+main h6 {
+  font-size: 16px;
+  font-weight: 500;
+}
+main figure {
+  display: flex;
+  align-items: center;
+  gap: 0 12px;
+  width: fit-content;
+}
+main figure img {
+  height: 24px;
+  width: 24px;
+}
+main figure figcaption {
+  font-size: 14px;
+}
+main:hover section h1 , main:focus section h1{
+  color: var(--yellow-);
+}
+@media (max-width: 375px) {
+  main {
+    width: 327px;
+    height: 501px;
+  }
+  main section h3 {
+    width: 73px;
+    height: 26px;
+  }
+  main section p,
+  main section h3 {
+    font-size: 12px;
+  }
+  main section h1 {
+    font-size: 20px;
+  }
+  main section h6 {
+    font-size: 14px;
+  }
+}
